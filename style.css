@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;1,500&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+    --font-primary:'Barlow Semi Condensed', sans-serif;;
+}
+body{
+    margin: 5% 10%;
+    background-color: var(--Light-grayish-blue);
+    font-family: var(--font-primary);
+}
+.name{
+    float: right;
+}
+.image{
+    max-width: 200px;
+}
+/*grids*/
+img{
+    border-radius: 50%;
+}
+.grid{
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 7%;
+}
+.main-text{
+    font-size: 1.4rem;
+    color: var(--White);
+    padding: 20px 0;
+    font-weight: 600;
+}
+.sub-text{
+    color: var(--White);
+    opacity: 70%;
+    font-size: 1rem;
+    word-spacing: 2.5px;
+}
+.name{
+    color: white;
+}
+.title{
+    color: white;
+    opacity: 50%;
+}
+/*grid background color*/
+.grid1{
+    background-color: var(--Moderate-violet);
+}
+.grid2{
+    background-color: var(--Very-dark-grayish-blue);
+}
+.grid3,.grid5{
+    background-color: var(--White);
+}
+.grid3 .main-text,
+.grid5 .main-text{
+    color: var(--Very-dark-blackish-blue);
+}
+.grid3 .name,
+.grid5 .name{
+    color: var(--Very-dark-blackish-blue);
+}
+.grid3 .title,
+.grid5 .title{
+    color: var(--Very-dark-blackish-blue);
+}
+.grid3 .sub-text,
+.grid5 .sub-text{
+    color: var(--Very-dark-blackish-blue);
+}
+.grid4{
+    background-color: var(--Very-dark-blackish-blue);
+}
+/*media query*/
+@media screen and (min-width:1024px){
+    body{
+        margin: 5%;
+    }
+    .main-grid{
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(8,1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+        'd d d d j j  k k'
+        's s p p p p k k';
+    }
+    .grid{
+        padding: 20px;
+        height: 100%;
+        margin-bottom: 5%;
+    }
+    .grid1{
+        grid-area: d;
+        
+    }
+    .grid2{
+        grid-area: j;
+        
+    }
+    .grid3{
+        grid-area: s;
+    }
+    .grid4{
+        grid-area: p;
+    }
+    .grid5{
+        grid-area: k;
+    }
+}
